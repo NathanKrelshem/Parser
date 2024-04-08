@@ -848,18 +848,18 @@ if __name__ == "__main__":
 
     # tokens.append(Token("symbol", "}"))
 
-    tokens.append(Token("keyword", "while"))
-    tokens.append(Token("symbol", "("))
-    tokens.append(Token("keyword", "skip"))
-    tokens.append(Token("symbol", ")"))
-    tokens.append(Token("symbol", "{"))
-    tokens.append(Token("symbol", "}"))
-
-    # tokens.append(Token("keyword", "let"))
-    # tokens.append(Token("identifier", "a"))
-    # tokens.append(Token("symbol", "="))
+    # tokens.append(Token("keyword", "while"))
+    # tokens.append(Token("symbol", "("))
     # tokens.append(Token("keyword", "skip"))
-    # tokens.append(Token("symbol", ";"))
+    # tokens.append(Token("symbol", ")"))
+    # tokens.append(Token("symbol", "{"))
+    # tokens.append(Token("symbol", "}"))
+
+    tokens.append(Token("keyword", "let"))
+    tokens.append(Token("identifier", "a"))
+    tokens.append(Token("symbol", "="))
+    tokens.append(Token("keyword", "skip"))
+    tokens.append(Token("symbol", ";"))
     # tokens.append(Token("symbol", "}"))
     #tokens.append(Token("keyword", "let"))
     #tokens.append(Token("identifier", "a"))
@@ -882,17 +882,19 @@ if __name__ == "__main__":
     # tokens.append(Token("symbol", "{"))
     # tokens.append(Token("symbol", "}"))   
 
-    # tokens.append(Token("keyword", "do"))
+    tokens.append(Token("keyword", "do"))
     # tokens.append(Token("identifier", "a"))
     # tokens.append(Token("symbol", "="))
-    # tokens.append(Token("keyword", "skip"))
-    # tokens.append(Token("symbol", ";"))
+    tokens.append(Token("keyword", "skip"))
+    tokens.append(Token("symbol", ";"))
+    tokens.append(Token("keyword", "return"))
+    tokens.append(Token("symbol", ";"))
 
     parser = CompilerParser(tokens)
     
     
     #try:
-    #works
+    # PROGRAM STRUCTURE (40 POINTS)
     # result = parser.compileProgram()    
     # result =  parser.compileClass()
     # result = parser.compileClassVarDec()
@@ -900,17 +902,16 @@ if __name__ == "__main__":
     # result = parser.compileParameterList()
     # result = parser.compileSubroutineBody()
     # result = parser.compileVarDec()
-    # result = parser.compileStatements()
+
+    # STATEMENTS (40 points)
+    result = parser.compileStatements()
     # result = parser.compileLet()
     # result = parser.compileIf()
-
+    # result = parser.compileWhile()
     # result = parser.compileDo()
     # result = parser.compileReturn()
 
-
-    
-    result = parser.compileWhile()
-    
+    # EXPRESSIONS (Optional - up to 20 bonus marks)
     #result = parser.compileExpression()
     #result = parser.compileTerm()
     #result = parser.compileExpressionList()
