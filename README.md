@@ -22,9 +22,7 @@ The parse tree is constructed recursively, with each method in the CompilerParse
 - Run the CompilerParser.py file.
 Example:
 
-'''bash
 python CompilerParser.py
-'''
 
 The program will execute the selected test case and print the resulting parse tree.
 Note: Modify the tokens list in the __main__ block of CompilerParser.py to test different code snippets.
