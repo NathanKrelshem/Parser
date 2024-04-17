@@ -815,6 +815,23 @@ if __name__ == "__main__":
         }
     """
     tokens = []
+
+#######################################################
+
+    # Test cases for compileProgram
+    # tokens.append(Token("keyword", "class"))
+    # tokens.append(Token("identifier", "Main"))
+    # tokens.append(Token("symbol", "{"))
+    # tokens.append(Token("symbol", "}"))
+
+    # tokens.append(Token("keyword", "static"))
+    # tokens.append(Token("keyword", "int"))
+    # tokens.append(Token("identifier", "a"))
+    # tokens.append(Token("symbol", ";"))
+
+#######################################################
+
+    # Test cases for compileClass
     # tokens.append(Token("keyword", "class"))
     # tokens.append(Token("identifier", "Main"))
     # tokens.append(Token("symbol", "{"))
@@ -822,32 +839,111 @@ if __name__ == "__main__":
     # tokens.append(Token("keyword", "int"))
     # tokens.append(Token("identifier", "a"))
     # tokens.append(Token("symbol", ";"))
+    # tokens.append(Token("symbol", "}"))
+
+#######################################################
+
+    # Test case for compileClassVarDec
     # tokens.append(Token("keyword", "static"))
     # tokens.append(Token("keyword", "int"))
-    # tokens.append(Token("identifier", "b"))
+    # tokens.append(Token("identifier", "a"))
     # tokens.append(Token("symbol", ";"))
-    # # tokens.append(Token("symbol", "}"))
 
-    # tokens.append(Token("keyword","constructor"))
-    # tokens.append(Token("identifier","Test"))
-    # tokens.append(Token("identifier","new"))
+#######################################################
+
+    # Test case for compileSubroutine
+    # tokens.append(Token("keyword", "function"))
+    # tokens.append(Token("keyword", "void"))
+    # tokens.append(Token("identifier","myFunc"))
     # tokens.append(Token("symbol","("))
+    # tokens.append(Token("keyword", "int"))
+    # tokens.append(Token("identifier", "a"))
     # tokens.append(Token("symbol", ")"))
     # tokens.append(Token("symbol", "{"))
     # tokens.append(Token("keyword", "var"))
     # tokens.append(Token("identifier", "int"))
     # tokens.append(Token("identifier", "a"))
     # tokens.append(Token("symbol", ";"))
-    # tokens.append(Token("keyword","function"))
-    # tokens.append(Token("keyword","void"))
-    # tokens.append(Token("identifier","myFunc2"))
-    # tokens.append(Token("symbol","("))
-    # tokens.append(Token("symbol", ")"))
-    # tokens.append(Token("symbol", "{"))
-
-
+    # tokens.append(Token("keyword", "let"))
+    # tokens.append(Token("identifier", "a"))
+    # tokens.append(Token("symbol", "="))
+    # tokens.append(Token("integerConstant", "1"))
+    # tokens.append(Token("symbol", ";"))
     # tokens.append(Token("symbol", "}"))
 
+#######################################################  
+
+    # Test case for compileParameterList
+    # tokens.append(Token("keyword", "int"))
+    # tokens.append(Token("identifier", "a"))
+    # tokens.append(Token("symbol", "."))
+    # tokens.append(Token("keyword", "char"))
+    # tokens.append(Token("identifier", "b"))
+
+#######################################################  
+
+    # Test case for compileSubroutineBody
+    # tokens.append(Token("symbol", "{"))
+    # tokens.append(Token("keyword", "var"))
+    # tokens.append(Token("identifier", "int"))
+    # tokens.append(Token("identifier", "a"))
+    # tokens.append(Token("symbol", ";"))
+    # tokens.append(Token("keyword", "let"))
+    # tokens.append(Token("identifier", "a"))
+    # tokens.append(Token("symbol", "="))
+    # tokens.append(Token("integerConstant", "1"))
+    # tokens.append(Token("symbol", ";"))
+    # tokens.append(Token("symbol", "}"))
+
+#######################################################  
+
+    # Test case for compileVarDec
+    # tokens.append(Token("keyword", "var"))
+    # tokens.append(Token("identifier", "int"))
+    # tokens.append(Token("identifier", "a"))
+    # tokens.append(Token("symbol", ";"))
+
+####################################################### 
+# STATEMENTS
+####################################################### 
+
+    # Test case for compileStatements
+    # tokens.append(Token("keyword", "let"))
+    # tokens.append(Token("identifier", "a"))
+    # tokens.append(Token("symbol", "="))
+    # tokens.append(Token("keyword", "skip"))
+    # tokens.append(Token("symbol", ";"))
+    # tokens.append(Token("keyword", "do"))
+    # tokens.append(Token("keyword", "skip"))
+    # tokens.append(Token("symbol", ";"))
+    # tokens.append(Token("keyword", "return"))
+    # tokens.append(Token("symbol", ";"))
+
+####################################################### 
+
+    # Test case for compileList
+    # tokens.append(Token("keyword", "let"))
+    # tokens.append(Token("identifier", "a"))
+    # tokens.append(Token("symbol", "="))
+    # tokens.append(Token("keyword", "skip"))
+    # tokens.append(Token("symbol", ";"))
+
+####################################################### 
+
+    # Test case for compileIf
+    # tokens.append(Token("keyword", "if"))
+    # tokens.append(Token("symbol", "("))
+    # tokens.append(Token("keyword", "skip"))
+    # tokens.append(Token("symbol", ")"))
+    # tokens.append(Token("symbol", "{"))
+    # tokens.append(Token("symbol", "}"))
+    # tokens.append(Token("keyword", "else"))
+    # tokens.append(Token("symbol", "{"))
+    # tokens.append(Token("symbol", "}"))
+
+####################################################### 
+
+    # Test case for compileWhile
     # tokens.append(Token("keyword", "while"))
     # tokens.append(Token("symbol", "("))
     # tokens.append(Token("keyword", "skip"))
@@ -855,47 +951,61 @@ if __name__ == "__main__":
     # tokens.append(Token("symbol", "{"))
     # tokens.append(Token("symbol", "}"))
 
-    tokens.append(Token("keyword", "let"))
-    tokens.append(Token("identifier", "a"))
-    tokens.append(Token("symbol", "="))
-    tokens.append(Token("keyword", "skip"))
-    tokens.append(Token("symbol", ";"))
-    # tokens.append(Token("symbol", "}"))
-    #tokens.append(Token("keyword", "let"))
-    #tokens.append(Token("identifier", "a"))
-    # tokens.append(Token("symbol", "["))
-    # tokens.append(Token("keyword", "skip"))
-    # tokens.append(Token("symbol", "]"))
-    # tokens.append(Token("symbol", "="))
+####################################################### 
+
+    # Test case for compileDo
+    # tokens.append(Token("keyword", "do"))
     # tokens.append(Token("keyword", "skip"))
     # tokens.append(Token("symbol", ";"))
-    #tokens.append(Token("integerConstant", "1"))
+
+####################################################### 
+
+    # Test case for compileReturn
+    # tokens.append(Token("keyword", "return"))
+    # tokens.append(Token("keyword", "skip"))
+    # tokens.append(Token("symbol", ";"))
+
+####################################################### 
+# EXPRESSIONS
+####################################################### 
+
+    # Test case for compileExpression
+    # tokens.append(Token("keyword", "skip"))
+
+    # tokens.append(Token("integerConstant", "1"))
     # tokens.append(Token("symbol", "+"))
     # tokens.append(Token("symbol", "("))
     # tokens.append(Token("identifier", "a"))
     # tokens.append(Token("symbol", "-"))
     # tokens.append(Token("identifier", "b"))
     # tokens.append(Token("symbol", ")"))
-    # tokens.append(Token("symbol", ";"))
-    
-    # tokens.append(Token("keyword", "else"))
-    # tokens.append(Token("symbol", "{"))
-    # tokens.append(Token("symbol", "}"))   
 
-    tokens.append(Token("keyword", "do"))
+####################################################### 
+
+    # Test cases for compileTerm
+    # tokens.append(Token("integerConstant", "1"))
+
+    # tokens.append(Token("symbol", "("))
     # tokens.append(Token("identifier", "a"))
-    # tokens.append(Token("symbol", "="))
-    tokens.append(Token("keyword", "skip"))
-    tokens.append(Token("symbol", ";"))
-    tokens.append(Token("keyword", "return"))
-    tokens.append(Token("symbol", ";"))
+    # tokens.append(Token("symbol", "-"))
+    # tokens.append(Token("identifier", "b"))
+    # tokens.append(Token("symbol", ")"))
+
+####################################################### 
+
+    # TEST CASE FOR compileExpressionList
+    # tokens.append(Token("integerConstant", "1"))
+    # tokens.append(Token("symbol", ","))
+    # tokens.append(Token("identifier", "a"))
+    # tokens.append(Token("symbol", "-"))
+    # tokens.append(Token("identifier", "b"))
+
+####################################################### 
 
     parser = CompilerParser(tokens)
     
-    
-    #try:
     # PROGRAM STRUCTURE (40 POINTS)
-    # result = parser.compileProgram()    
+    result = parser.compileProgram()    
     # result =  parser.compileClass()
     # result = parser.compileClassVarDec()
     # result = parser.compileSubroutine()
@@ -904,7 +1014,7 @@ if __name__ == "__main__":
     # result = parser.compileVarDec()
 
     # STATEMENTS (40 points)
-    result = parser.compileStatements()
+    # result = parser.compileStatements()
     # result = parser.compileLet()
     # result = parser.compileIf()
     # result = parser.compileWhile()
@@ -915,7 +1025,6 @@ if __name__ == "__main__":
     #result = parser.compileExpression()
     #result = parser.compileTerm()
     #result = parser.compileExpressionList()
-
 
     print(result)
     #except ParseException:
